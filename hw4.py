@@ -13,7 +13,19 @@ most_common_char
 Given an input string s, return the most common character in s.
 """
 def most_common_char(s):
-	pass
+    count = {}
+    highScore = 0
+    mostKey = None
+    for c in s:
+        if c in count:
+            count[c] += 1
+        else:
+            count[c] = 1
+    for key in count:
+        if count[key]>highScore:
+            highScore = count[key]
+            mostKey = key
+    return mostKey
 
 
 """
@@ -194,6 +206,4 @@ Example 2:
 		[1, 2]
 """
 def zero_sum_subarray(arr):
-    pass 
-
-
+    pass
